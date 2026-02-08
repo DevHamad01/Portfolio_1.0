@@ -1,0 +1,52 @@
+/* App-specific styles */
+
+/* Ensure smooth transitions throughout */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Project card image hover effect */
+.project-card img {
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.02);
+}
+
+/* Toggle switch animation */
+.toggle-switch {
+  transition: background-color 0.2s ease;
+}
+
+.toggle-knob {
+  transition: transform 0.2s ease;
+}
+
+/* Color picker dot animation */
+.color-dot {
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.color-dot:hover {
+  transform: scale(1.1);
+}
+
+.color-dot.active {
+  transform: scale(1.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .highlight-blue {
+    padding: 0.1em 0.3em;
+  }
+}
+
+/* Print styles */
+@media print {
+  .chaos-canvas,
+  .color-picker {
+    display: none !important;
+  }
+}

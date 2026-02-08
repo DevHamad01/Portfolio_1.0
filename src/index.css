@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+
+    /* Custom colors for the portfolio */
+    --highlight-blue: 199 89% 92%;
+    --underline-pink: 350 89% 88%;
+    --mint-green: 158 64% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+
+  /* Highlight effect for "software developer" */
+  .highlight-blue {
+    background-color: hsl(199 89% 92%);
+    padding: 0.15em 0.4em;
+    border-radius: 9999px;
+    font-weight: 500;
+    white-space: nowrap;
+    border: none;
+    transform: none;
+  }
+
+  /* Wavy underline for "applications" */
+  .wavy-underline {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: hsl(350 89% 75%);
+    text-underline-offset: 4px;
+    text-decoration-thickness: 3px;
+  }
+
+  /* Hand-drawn style for About Me heading */
+  .handwritten {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+    font-weight: 400;
+  }
+
+  /* Project card hover effect */
+  .project-card {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Button styles */
+  .btn-outline {
+    @apply px-6 py-2.5 border border-gray-300 rounded-full text-sm font-medium text-gray-700 transition-all duration-200;
+  }
+
+  .btn-outline:hover {
+    @apply bg-gray-50 border-gray-400;
+  }
+
+  /* Link underline animation */
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-px bg-current transform scale-x-100 transition-transform duration-200 origin-left;
+  }
+
+  .link-underline:hover::after {
+    @apply scale-x-0 origin-right;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Canvas for chaos mode */
+.chaos-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.chaos-canvas.active {
+  pointer-events: auto;
+}
+
+.cursor-pen {
+  cursor: url('/pen-svg.svg') 0 24, auto;
+}
