@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import './App.css';
 
-// Project interface
 interface Project {
   id: string;
   name: string;
@@ -13,7 +12,6 @@ interface Project {
   disabled?: boolean;
 }
 
-// Project data
 const projects: Project[] = [
   {
     id: 'TypeRush',
@@ -236,11 +234,11 @@ function App() {
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-snug tracking-tight">
                 I'm a <span className="highlight-blue box-decoration-clone">Full Stack Developer</span>{' '}
                 who builds scalable and user-friendly{' '}
-                <span className="wavy-underline decoration-4 underline-offset-8">web applications</span>.
+                <span className="wavy-underline decoration-4 underline-offset-8">Web Applications</span>.
               </h2>
 
               <p className="text-gray-600 text-lg leading-loose max-w-lg z-10">
-                Specializing in <strong>Angular</strong>, <strong>React</strong>, <strong>ASP.NET Core</strong>, and <strong>SQL Server</strong>.
+                Specializing in <strong>Angular</strong>, <strong>React</strong>, <strong>ASP.NET Core</strong> and <strong>SQL Server</strong>.
                 {' '}Check out my work below, find me on{' '}
                 <a href="https://github.com/DevHamad01" target="_blank" rel="noopener noreferrer" className="link-underline text-gray-900 font-medium">GitHub</a> /{' '}
                 <a href="https://www.linkedin.com/in/muhammad-hamad-5b6067352/" target="_blank" rel="noopener noreferrer" className="link-underline text-gray-900 font-medium">LinkedIn</a>,
