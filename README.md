@@ -19,7 +19,7 @@ A modern, responsive personal portfolio website built with **React**, **TypeScri
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/DevHamad01/portfolio.git
+    git clone https://github.com/DevHamad01/Portfolio_1.0.git
     ```
 2.  Navigate to the project directory:
     ```bash
