@@ -97,7 +97,7 @@
 
   /* Link underline animation */
   .link-underline {
-    @apply relative;
+    @apply relative cursor-pointer inline-block;
   }
 
   .link-underline::after {

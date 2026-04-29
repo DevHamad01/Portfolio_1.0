@@ -16,40 +16,49 @@ interface Project {
 // Project data
 const projects: Project[] = [
   {
-    id: 'auth-system',
-    name: 'Authentication System',
-    description: 'Implemented a secure authentication module using Angular 19 and JWT, featuring token-based login and role-based access control.',
-    image: '/project-huetab.jpg',
+    id: 'TypeRush',
+    name: 'TypeRush',
+    description: 'Modern typing speed test app with React, Vite & Firebase. Track WPM, unlock achievements, and improve your typing skills with real-time performance analytics.',
+    image: '/TypeRush.png',
     buttonText: 'View on GitHub',
-    buttonLink: '#',
+    buttonLink: 'https://github.com/DevHamad01',
     layout: 'image-left'
   },
   {
     id: 'pathfinding',
     name: 'Pathfinding Visualizer',
     description: 'Built an interactive visualizer for pathfinding algorithms (A*, Dijkstra, BFS, DFS) to demonstrate algorithm flow in real time.',
-    image: '/project-allocated.jpg',
+    image: '/PathFind.png',
     buttonText: 'View on GitHub',
-    buttonLink: '#',
+    buttonLink: 'https://github.com/DevHamad01',
     layout: 'text-left',
   },
   {
     id: 'admission-lylo',
     name: 'Admission Lylo Platform',
     description: 'Developed a student admission management portal with dynamic form handling and admin dashboard using Angular and ASP.NET API.',
-    image: '/project-designindex.jpg',
-    buttonText: 'View Project',
-    buttonLink: '#',
+    image: '/Admissionlylo.png',
+    buttonText: 'View on GitHub',
+    buttonLink: 'https://github.com/DevHamad01',
     layout: 'image-left'
   },
   {
     id: 'cmax-panels',
     name: 'C-Max & Call Mining',
     description: 'Created admin and analytics panels to manage leads, calls, and reports efficiently through real-time data dashboards.',
-    image: '/project-appideas.jpg',
-    buttonText: 'View Project',
-    buttonLink: '#',
+    image: '/callmining.png',
+    buttonText: 'View on GitHub',
+    buttonLink: 'https://github.com/DevHamad01',
     layout: 'text-left'
+  },
+  {
+    id: 'findcare-app',
+    name: 'FindCare - Doctor Appointment App',
+    description: 'FindCare is a simple Android-based doctor appointment booking application built for academic purposes using Java, XML, and a local database. It focuses on clean UI, usability, and basic healthcare appointment flow.',
+    image: '/FindCare.png',
+    buttonText: 'View on GitHub',
+    buttonLink: 'https://github.com/DevHamad01',
+    layout: 'image-left'
   }
 ];
 
@@ -171,6 +180,12 @@ function App() {
     }
   }, [chaosEnabled]);
 
+  // Email handler function
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.location.href = 'mailto:iammhamad8@gmail.com';
+  };
+
   return (
     <div
       ref={containerRef}
@@ -215,7 +230,7 @@ function App() {
       <main className="pt-24 relative z-0">
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 lg:py-24">
-          <div className="flex flex-col-reverse md:grid md:grid-cols-[1.1fr_0.9fr] gap-12 md:gap-16 items-center">
+          <div className="flex flex-col-reverse md:grid md:grid-cols-[1.1fr_0.9fr] gap-24 md:gap-16 items-center">
             {/* Left: Text Content */}
             <div className="space-y-8 text-center md:text-left">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-snug tracking-tight">
@@ -230,7 +245,7 @@ function App() {
                 <a href="https://github.com/DevHamad01" target="_blank" rel="noopener noreferrer" className="link-underline text-gray-900 font-medium">GitHub</a> /{' '}
                 <a href="https://www.linkedin.com/in/muhammad-hamad-5b6067352/" target="_blank" rel="noopener noreferrer" className="link-underline text-gray-900 font-medium">LinkedIn</a>,
                 {' '}or just{' '}
-                <a href="mailto:iammhamad8@gmail.com" className="link-underline text-gray-900 font-medium">send me an email</a>.
+                <a href="#" onClick={handleEmailClick} className="link-underline text-gray-900 font-medium cursor-pointer">send me an email</a>.
               </p>
             </div>
 
@@ -273,12 +288,14 @@ function App() {
                   {project.description}
                 </p>
                 <div className="pt-2">
-                  <button
-                    className={`btn-outline ${project.disabled ? 'opacity-60 cursor-not-allowed' : ''}`}
-                    disabled={project.disabled}
+                  <a
+                    href={project.buttonLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-block btn-outline ${project.disabled ? 'opacity-60 cursor-not-allowed pointer-events-none' : ''}`}
                   >
                     {project.buttonText}
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -301,17 +318,16 @@ function App() {
             {/* Two columns */}
             <div className="grid md:grid-cols-2 gap-8 md:gap-16">
               <p className="text-gray-600 leading-relaxed">
-                I am a software developer at{' '}
-                <a href="https://atgsolutions.co/" target="_blank" rel="noopener noreferrer" className="link-underline text-gray-900">ATG SOLUTIONS</a>.
-                {' '}I have a background in frontend/mobile-development and API services.
-                {' '}I enjoy collaborating with designers and developers in collectively building
-                user-friendly products that produce business value.
+                I am a Full Stack Developer at{' '}
+                <a href="https://atgsolutions.co/" target="_blank" rel="noopener noreferrer" className="link-underline text-gray-900">ATG Solutions</a>
+                {' '}with hands-on experience in building scalable web applications using{' '}
+                <strong>Angular</strong>, <strong>React</strong>, <strong>ASP.NET Core</strong>, and <strong>SQL Server</strong>.
+                {' '}I enjoy creating clean, user-friendly interfaces and developing efficient backend APIs that solve real business problems.
               </p>
 
               <p className="text-gray-600 leading-relaxed">
-                When not online, I can be found at bootcamps and meetups, learning about
-                the latest updates in the world of technology, or skating around the
-                Wellington waterfront on a good day.
+                I'm passionate about clean architecture, performance optimization, and writing maintainable code while collaborating with teams in agile environments.
+                {' '}Outside of work, I explore AI-assisted development, automation, and modern tech trends to continuously sharpen my skills.
               </p>
             </div>
           </div>
@@ -323,7 +339,7 @@ function App() {
             {/* Email CTA */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               Send me{' '}
-              <a href="mailto:iammhamad8@gmail.com" className="link-underline">an email</a>
+              <a href="#" onClick={handleEmailClick} className="link-underline cursor-pointer">an email</a>
             </h2>
 
             {/* Copyright */}
